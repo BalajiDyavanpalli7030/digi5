@@ -1,7 +1,7 @@
 
 ## Project Structure
 
-- `frontend/`: React.js code for the frontend
+- `my-article-app/`: React.js code for the frontend
  
 - `server/`: ExpressJS code for the backend
 
