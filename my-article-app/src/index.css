@@ -1,0 +1,140 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; 
+}
+
+/* ArticleDetails styles */
+.article-details {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  
+  .article-details h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .article-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .article-details p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .article-details a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .article-details a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* ArticleList styles */
+.article-list {
+  margin-top: 20px;
+}
+
+.article-list h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.article-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list li {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.article-list li:hover {
+  transform: scale(1.05);
+}
+
+.article-list .article-item {
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.article-list .article-item:hover {
+  background-color: #f9f9f9;
+}
+
+.article-list .article-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+.article-list .article-item .article-details {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+/* Container for the search bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.search-input::placeholder {
+  color: #999;
+}
+
+
+.search-input:hover {
+  border-color: #007bff;
+}
