@@ -1,18 +1,1 @@
-
-{
-    "name": "digi5-backend",
-    "scope": "Balaji Dyavanpalli",
-    "builds": [
-      {
-        "src": "server/package.json",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/server/api/$1"
-      }
-    ]
-  }
-  
+{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }

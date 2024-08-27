@@ -5,6 +5,10 @@ const cors = require('cors');
 const app = express();
 app.use(cors()); 
 
+app.get('/', (req, res)=>{
+  res.send("<h1>Hi From Server</h1>")
+})
+
 app.get('/api/articles', async (req, res) => {
   try {
 
@@ -43,4 +47,6 @@ app.get('/api/articles', async (req, res) => {
 });
 
 const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+export default app
