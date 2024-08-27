@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectArticle } from '../redux/slices/articlesSlice';
 import ArticleDetails from './ArticleDetails';
-import { List, ListItem, ListItemText, Typography } from '@mui/material';
+import { List, ListItem, ListItemText, Typography,Box } from '@mui/material';
 
 const ArticleList = ({ searchTerm }) => {
   const { list, loading, error, selectedArticle } = useSelector((state) => state.articles);
@@ -26,11 +26,19 @@ const ArticleList = ({ searchTerm }) => {
             key={index} 
             button 
             onClick={() => dispatch(selectArticle(article))}
-            sx={{ borderBottom: '1px solid #ddd', padding: 2 }}
+            sx={{ borderBottom: '1px solid #ddd',
+               padding: 2,
+               display: 'flex', 
+               justifyContent: 'center', 
+               alignItems: 'center'
+              }}
           >
-            <ListItemText primary={article.title} />
-            {selectedArticle && selectedArticle.title === article.title && (
-              <ArticleDetails />
+             {!selectedArticle || selectedArticle.title !== article.title ? (
+              <ListItemText primary={article.title} />
+            ) : (
+              <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                <ArticleDetails />
+              </Box>
             )}
           </ListItem>
         ))}
