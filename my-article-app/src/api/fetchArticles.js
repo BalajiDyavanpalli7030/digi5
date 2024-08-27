@@ -1,6 +1,6 @@
 export const fetchArticles = async () => {
   try {
-    const response = await fetch('http://localhost:5000/api/articles');
+    const response = await fetch('https://digi5.onrender.com/api/articles');
     const articles = await response.json();
 
     // Function to extract value from link
