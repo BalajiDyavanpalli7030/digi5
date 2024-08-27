@@ -1,16 +1,16 @@
 import React from 'react';
+import { TextField } from '@mui/material';
 
 const SearchBar = ({ searchTerm, setSearchTerm }) => {
   return (
-    <div className="search-bar">
-      <input
-        type="text"
-        placeholder="Search articles..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="search-input"
-      />
-    </div>
+    <TextField
+      fullWidth
+      placeholder="Search articles..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      variant="outlined"
+      sx={{ marginBottom: 3 }}
+    />
   );
 };
 

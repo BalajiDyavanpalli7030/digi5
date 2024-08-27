@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { getArticles } from './redux/slices/articlesSlice';
 import ArticleList from './components/ArticleList';
 import SearchBar from './components/SearchBar';
-import './App.css';
+import { Container, Grid } from '@mui/material';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,12 +14,14 @@ function App() {
   }, [dispatch]);
 
   return (
-     <div className="container mx-auto p-4">
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <ArticleList searchTerm={searchTerm} />
-      </div>
-    </div>
+    <Container maxWidth="md" sx={{ mt: 4 }}>
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} sx={{ mt: 2 }}/>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <ArticleList searchTerm={searchTerm} />
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
