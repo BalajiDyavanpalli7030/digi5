@@ -22,6 +22,10 @@
    cd my-article-app
    npm install
    ```
+## Create an .env file in the root directory of "my-article-app" and add below content
+   ```bash
+   VITE_API_URL=http://127.0.0.1:5000/api/articles
+   ```
 ## Install backend dependencies
    ```bash
    cd server
